@@ -20,3 +20,15 @@
   height: 100%;
   background-position: center;
 }
+#fondo2{
+  background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg);
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+#fondo3{
+  background-image: url(https://cdn.pixabay.com/photo/2018/01/30/22/50/forest-3119826_960_720.jpg);
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
