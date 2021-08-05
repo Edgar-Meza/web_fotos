@@ -7,10 +7,143 @@
     <script src="js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Paisajes</title>
+    <script>
+      $(window).ready(function (){
+        var cont = 0;
+        var f1 = document.getElementById('fondo1');
+        var f2 = document.getElementById('fondo2');
+        var f3 = document.getElementById('fondo3');
+        setInterval(function(){
+          if(cont === 0){
+            f1.style.opacity = 0;
+            f2.style.opacity = 1;
+            f3.style.opacity = 0;
+            cont++;
+          }else if(cont === 1){
+            f1.style.opacity = 0;
+            f2.style.opacity = 0;
+            f3.style.opacity = 1;
+            cont++;
+          }else if(cont === 2){
+            f1.style.opacity = 1;
+            f2.style.opacity = 0;
+            f3.style.opacity = 0;
+            cont=0;
+          }
+        },10000)
+      });
+    </script>
+    <script>
+      $(window).scroll(function(){
+        if($('#barra').offset().top > 60){
+          $('#lent img').removeClass('hov1');
+          $('#lent img').removeClass('hov2');
+          $('#protec').removeClass('hov1');
+          $('#protec').removeClass('hov2');
+          $('#lent1').removeClass('la1');
+          $('#lent1').removeClass('la2');
+          $('#lent2').removeClass('la1');
+          $('#lent2').removeClass('la2');
+          $('#lent3').removeClass('la1');
+          $('#lent3').removeClass('la2');
+          $('#lent4').removeClass('la1');
+          $('#lent4').removeClass('la2');
+          $('#lent5').removeClass('la1');
+          $('#lent5').removeClass('la2');
+          $('#lent6').removeClass('la1');
+          $('#lent6').removeClass('la2');
+          $('#barra').css('opacity', 1);
+          $('#logop').css('opacity', 0);
+          $('#barra').css('z-index', '14');
+          $('#logop').css('z-index', '13');
+          $('#mo1').addClass('mo1r');
+          $('#mo2').addClass('mo2r');
+          $('#mo3').addClass('mo3r');
+          $('#mo4').addClass('mo4r');
+          $('#mo5').addClass('mo5r');
+          $('#mo6').addClass('mo6r');
+          $('#mo4').css('right', '-35vw');
+          $('#mo5').css('right', '-25vw');
+          $('#mo6').css('right', '-15vw');
+          $('#barra').addClass('bg-nav');
+          $('#lent img').addClass('return');
+          $('#protec').addClass('return');
+          $('#lent1').addClass('return-l');
+          $('#lent2').addClass('return-l');
+        }else{
+          $('#lent img').removeClass('hov1');
+          $('#lent img').removeClass('hov2');
+          $('#protec').removeClass('hov1');
+          $('#protec').removeClass('hov2');
+          $('#barra').css('opacity', 0);
+          $('#logop').css('opacity', 1);
+          $('#barra').css('z-index', '13');
+          $('#logop').css('z-index', '14');
+          $('#mo1').removeClass('mo1r');
+          $('#mo2').removeClass('mo2r');
+          $('#mo3').removeClass('mo3r');
+          $('#mo4').removeClass('mo4r');
+          $('#mo5').removeClass('mo5r');
+          $('#mo6').removeClass('mo6r');
+          $('#mo4').css('right', '0');
+          $('#mo5').css('right', '0');
+          $('#mo6').css('right', '0');
+          $('#barra').removeClass('bg-nav');
+          $('#lent img').removeClass('return');
+          $('#protec').removeClass('return');
+          $('#lent1').removeClass('return-l');
+          $('#lent2').removeClass('return-l');
+          $('#lent1').removeClass('la1');
+          $('#lent1').removeClass('la2');
+          $('#lent2').removeClass('la1');
+          $('#lent2').removeClass('la2');
+          $('#lent3').removeClass('la1');
+          $('#lent3').removeClass('la2');
+          $('#lent4').removeClass('la1');
+          $('#lent4').removeClass('la2');
+          $('#lent5').removeClass('la1');
+          $('#lent5').removeClass('la2');
+          $('#lent6').removeClass('la1');
+          $('#lent6').removeClass('la2');
+        }
+      });
+      function hovopen(element){
+        $('#lent img').removeClass('hov2');
+        $('#lent img').addClass('hov1');
+        $(element).addClass('selecti');
+        $('#protec').removeClass('hov2');
+        $('#protec').addClass('hov1');
+        $('#lent1').removeClass('la2');
+        $('#lent1').addClass('la1');
+        $('#lent2').removeClass('la2');
+        $('#lent2').addClass('la1');
+      }
+      function hovclose(element){
+        $('#lent img').removeClass('hov1');
+        $('#lent img').addClass('hov2');
+        $(element).removeClass('selecti');
+        $('#protec').removeClass('hov1');
+        $('#protec').addClass('hov2');
+        $('#lent1').removeClass('la1');
+        $('#lent1').addClass('la2');
+        $('#lent2').removeClass('la1');
+        $('#lent2').addClass('la2');
+      }
+      $(document).ready(function(){
+        $('#mo1 a').hover(function(){hovopen('#mo1');},function(){hovclose('#mo1');});
+        $('#mo2 a').hover(function(){hovopen('#mo2');},function(){hovclose('#mo2');});
+        $('#mo3 a').hover(function(){hovopen('#mo3');},function(){hovclose('#mo3');});
+        $('#mo4 a').hover(function(){hovopen('#mo4');},function(){hovclose('#mo4');});
+        $('#mo5 a').hover(function(){hovopen('#mo5');},function(){hovclose('#mo5');});
+        $('#mo6 a').hover(function(){hovopen('#mo6');},function(){hovclose('#mo6');});
+      });
+    </script>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark menav w-100">
+  <body style="overflow-x:hidden">
+    <!--navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-dark menav w-100" id="barra">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Logo</a>
         <button type="button" name="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="menu navegacion">
@@ -25,14 +158,16 @@
               <a href="#" class="nav-link">opcion</a>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="ops" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                opciones
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="ops">
-                <li><a href="#" class="dropdown-item">opcion 1</a></li>
-                <li><a href="#" class="dropdown-item">opcion 2</a></li>
-                <li><a href="#" class="dropdown-item">opcion 3</a></li>
-              </ul>
+              <a class="nav-link" href="#">opcion</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">opcion</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">opcion</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">opcion</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -42,28 +177,33 @@
         </div>
       </div>
     </nav>
-    <div class="contianer-fluid overflow-hidden welcome carousel slide" id="slider" data-bs-ride="carousel" style="display: flex;">
-      <div class="carousel-inner">
-        <div id="fondo1" class="carousel-item active">
-          <div class="texto-welcome">
-            <h1>este es un mensaje 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptatibus maxime eveniet expedita earum, laborum iste, voluptates facere itaque repudiandae dolorum iusto, blanditiis non, corrupti. Illum consectetur reiciendis mollitia veniam.</p>
-          </div>
-        </div>
-        <div id="fondo2" class="carousel-item">
-          <div class="texto-welcome">
-            <h1>este es un mensaje 2</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptatibus maxime eveniet expedita earum, laborum iste, voluptates facere itaque repudiandae dolorum iusto, blanditiis non, corrupti. Illum consectetur reiciendis mollitia veniam.</p>
-          </div>
-        </div>
-        <div id="fondo3" class="carousel-item">
-          <div class="texto-welcome">
-            <h1>este es un mensaje 3</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptatibus maxime eveniet expedita earum, laborum iste, voluptates facere itaque repudiandae dolorum iusto, blanditiis non, corrupti. Illum consectetur reiciendis mollitia veniam.</p>
-          </div>
+    <div id="logop"><img src="images/logo2.png" alt="logo"></div>
+    <!--portada-->
+    <div class="contianer-fluid overflow-hidden welcome">
+      <div class="mo" id="mo1"><a href="#">Opcion</a></div>
+      <div class="mo" id="mo2"><a href="#">Opcion</a></div>
+      <div class="mo" id="mo3"><a href="#">Opcion</a></div>
+      <div class="mo" id="mo4"><a href="#">Opcion</a></div>
+      <div class="mo" id="mo5"><a href="#">Opcion</a></div>
+      <div class="mo" id="mo6"><a href="#">Opcion</a></div>
+      <div class="lente" id="lent">
+        <img src="images/len112.png" alt="lente">
+        <div id="protec">
+          <div id="lent1"></div>
+          <div id="lent2"></div>
         </div>
       </div>
+      <div id="fondo1" style="opacity: 1">
+
+      </div>
+      <div id="fondo2" style="opacity: 0">
+
+      </div>
+      <div id="fondo3" style="opacity: 0">
+
+      </div>
     </div>
+
     <div class="container-fluid">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, quas nihil ut corporis aut praesentium tempore iste, nisi voluptatibus dolorum optio inventore. Laboriosam tempora iste enim officia aut, voluptatem ullam!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat sit, consequatur numquam provident quae dolorum autem laborum officiis et, deleniti delectus voluptatibus tempora iure facere cupiditate suscipit, eaque ad tenetur.</p>

@@ -1,6 +1,14 @@
+/*generales*/
+.d-n{
+  display: none !important;
+}
+.bg-nav{
+  background: rgba(0,0,0,0.5);
+}
+/*especificas*/
 .menav{
-  position: fixed!important;
-  z-index: 10;
+  position: fixed !important;
+  z-index: 13;
 }
 .welcome{
   height: 80vh;
@@ -17,18 +25,339 @@
 #fondo1{
   background-image: url(https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg);
   background-size: cover;
-  height: 100%;
   background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  transition: all 3s ease-in-out;
+  filter: saturate(0.5);
 }
 #fondo2{
   background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg);
   background-size: cover;
-  height: 100%;
   background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  transition: all 3s ease-in-out;
+  filter: saturate(0.5);
 }
 #fondo3{
   background-image: url(https://cdn.pixabay.com/photo/2018/01/30/22/50/forest-3119826_960_720.jpg);
   background-size: cover;
-  height: 100%;
   background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  transition: all 3s ease-in-out;
+  filter: saturate(0.5);
+}
+.mo{
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: 12;
+  height: 35px;
+  text-align: center;
+  padding: 5px;
+  overflow: hidden;
+}
+.mo a{
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bolder;
+}
+#mo1{
+  width: 15vw;
+  top: 20%;
+  animation-name: mo1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: backwards;
+  transition: left 2s ease-in-out;
+}
+#mo2{
+  width: 25vw;
+  top: 40%;
+  animation-name: mo2;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  transition: left 2s ease-in-out;
+}
+#mo3{
+  width: 35vw;
+  top: 60%;
+  animation-name: mo3;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  transition: left 2s ease-in-out;
+}
+#mo4{
+  width: 35vw;
+  top: 20%;
+  animation-name: mo4;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: backwards;
+  transition: left 2s ease-in-out;
+  right: 0;
+}
+#mo5{
+  width: 25vw;
+  top: 40%;
+  animation-name: mo5;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  transition: left 2s ease-in-out;
+  right: 0;
+}
+#mo6{
+  width: 15vw;
+  top: 60%;
+  animation-name: mo6;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  transition: left 2s ease-in-out;
+  right: 0;
+}
+.lente{
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+  filter: opacity(0.9);
+}
+.lente img{
+  margin-top: 10%;
+  width: 20%;
+  animation-name: lente;
+  animation-duration: 3s;
+  transform: rotate(-90deg);
+}
+#protec{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 39%;
+  left: 44.5%;
+  transform: rotate(-90deg);
+  animation-name: lente;
+  animation-duration: 3s;
+  z-index: -1;
+}
+#lent1{
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 0%;
+  top: 0;
+  position: absolute;
+  animation-name: lent;
+  animation-duration: 3s;
+}
+#lent2{
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 0%;
+  bottom: 0;
+  position: absolute;
+  animation-name: lent;
+  animation-duration: 3s;
+}
+
+#logop{
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  font-weight: bolder;
+  position: absolute;
+  z-index: 14;
+  height: 50px;
+  padding: 1%;
+  opacity: 1;
+}
+#logop img{
+  width: 7%;
+  filter: invert(1);
+}
+#barra{
+  opacity: 0;
+}
+.mo1r{
+  left: -15vw;
+  animation-name: mo1r !important;
+  animation-duration: 1s !important;
+  animation-delay: 0s !important;
+  animation-fill-mode: backwards !important;
+}
+.mo2r{
+  left: -25vw;
+  animation-name: mo2r !important;
+  animation-duration: 1s !important;
+  animation-delay: 1s !important;
+  animation-fill-mode: backwards !important;
+}
+.mo3r{
+  left: -35vw;
+  animation-name: mo3r !important;
+  animation-duration: 1s !important;
+  animation-delay: 2s !important;
+  animation-fill-mode: backwards !important;
+}
+.mo4r{
+  right: -35vw;
+  animation-name: mo4r !important;
+  animation-duration: 1s !important;
+  animation-delay: 0s !important;
+  animation-fill-mode: backwards !important;
+}
+.mo5r{
+  right: -25vw;
+  animation-name: mo5r !important;
+  animation-duration: 1s !important;
+  animation-delay: 1s !important;
+  animation-fill-mode: backwards !important;
+}
+.mo6r{
+  right: -15vw;
+  animation-name: mo6r !important;
+  animation-duration: 1s !important;
+  animation-delay: 2s !important;
+  animation-fill-mode: backwards !important;
+}
+.return{
+  animation-name: protec !important;
+  animation-duration: 3s !important;
+  animation-fill-mode:backwards !important;
+}
+.return-l{
+  animation-name: lentt !important;
+  animation-duration: 3s !important;
+  animation-fill-mode:backwards !important;
+}
+.hov1{
+  animation-name: hv1 !important;
+  animation-duration: 1s !important;
+  animation-fill-mode: backwards !important;
+  transform: rotate(90deg) !important;
+}
+.hov2{
+  animation-name: hv2 !important;
+  animation-duration: 1s !important;
+  animation-fill-mode: backwards !important;
+  transform: rotate(-90deg) !important;
+}
+.selecti{
+  background: rgba(255,255,255,0.5);
+}
+.selecti a{
+  color: #000;
+}
+.la1{
+  height: 50% !important;
+  animation-name: lente1 !important;
+  animation-duration: 1s !important;
+  animation-fill-mode: backwards !important;
+}
+.la2{
+  height: 0% !important;
+  animation-name: lente2 !important;
+  animation-duration: 1s !important;
+  animation-fill-mode: backwards !important;
+}
+/*#mo1 a:hover{
+  color: red;
+}*/
+/*keyframes*/
+@keyframes mo1 {
+  0%{left: -15vw;}
+  100%{left: 0;}
+}
+@keyframes mo2 {
+  0%{left: -25vw;}
+  100%{left: 0;}
+}
+@keyframes mo3 {
+  0%{left: -35vw;}
+  100%{left: 0;}
+}
+@keyframes mo4 {
+  0%{right: -35vw;}
+  100%{right: 0;}
+}
+@keyframes mo5 {
+  0%{right: -25vw;}
+  100%{right: 0;}
+}
+@keyframes mo6 {
+  0%{right: -15vw;}
+  100%{right: 0;}
+}
+
+@keyframes mo1r {
+  0%{left: 0;}
+  100%{left: -15vw;}
+}
+@keyframes mo2r {
+  0%{left: 0;}
+  100%{left: -25vw;}
+}
+@keyframes mo3r {
+  0%{left: 0;}
+  100%{left: -35vw;}
+}
+@keyframes mo4r {
+  0%{right: 0;}
+  100%{right: -35vw;}
+}
+@keyframes mo5r {
+  0%{right: 0;}
+  100%{right: -25vw;}
+}
+@keyframes mo6r {
+  0%{right: 0;}
+  100%{right: -15vw;}
+}
+@keyframes lente {
+  0%{transform: rotate(90deg);}
+  33%{transform: rotate(-90deg);}
+  66%{transform: rotate(90deg);}
+  100%{transform: rotate(-90deg);}
+}
+@keyframes lent {
+  0%{height: 50%;}
+  33%{height: 0%;}
+  66%{height: 50%;}
+  100%{height: 0%;}
+}
+@keyframes protec {
+  0%{transform: rotate(90deg);}
+  33%{transform: rotate(-90deg);}
+  66%{transform: rotate(90deg);}
+  100%{transform: rotate(-90deg);}
+}
+@keyframes lentt {
+  0%{height: 50%;}
+  33%{height: 0%;}
+  66%{height: 50%;}
+  100%{height: 0%;}
+}
+@keyframes hv1 {
+  from{transform: rotate(-90deg);}
+  to{transform: rotate(90deg);}
+}
+@keyframes hv2 {
+  from{transform: rotate(90deg);}
+  to{transform: rotate(-90deg);}
+}
+@keyframes lente1 {
+  0%{height: 0%;}
+  100%{height: 50%;}
+}
+@keyframes lente2 {
+  from{height: 50%;}
+  to{height: 0%;}
 }
